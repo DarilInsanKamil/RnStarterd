@@ -36,3 +36,21 @@ export const InputTodo = styled.TextInput`
 export const TxtBtn = styled.Text`
     font-size: 16px;
     `
+    export const ListTodo = styled.View`
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 20px 0px 20px;
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    `
+    export const TxtList = styled.Text`
+        font-size: 20px;
+        width: 85%;
+    `
+    export const DeleteBtn = styled.TouchableOpacity`
+        background-color: red;
+        padding: 7px;
+        border-radius: 5px;
+    `
