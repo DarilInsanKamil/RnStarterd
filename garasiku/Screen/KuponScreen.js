@@ -17,6 +17,7 @@ const KuponScreen = ({ navigation }) => {
                         iconjam: item.iconjam,
                         iconuang: item.iconuang,
                         code: item.code,
+                        bullet: item.bullet,
                         sk: item.sk,
                         berlaku: item.berlaku,
                         min_transaksi: item.min_transaksi
@@ -29,14 +30,14 @@ const KuponScreen = ({ navigation }) => {
                                     <Image source={item.iconuang} />
                                 </Icons>
                                 <ExpTrans>
-                                    <Txt inputColor="#A7A7A7" >Berlaku hingga</Txt>
-                                    <Txt InputWeight="400">{item.berlaku}</Txt>
-                                    <Txt inputColor="#A7A7A7">Minimal transaksi</Txt>
-                                    <Txt InputWeight="400">{item.min_transaksi}</Txt>
+                                    <Txt inputColor="#A7A7A7" inputWeight="normal">Berlaku hingga</Txt>
+                                    <Txt inputWeight="400" >{item.berlaku}</Txt>
+                                    <Txt inputColor="#A7A7A7" inputWeight="normal">Minimal transaksi</Txt>
+                                    <Txt inputWeight="400">{item.min_transaksi}</Txt>
                                 </ExpTrans>
                             </KuponContent>
                             <KodeKupon>
-                                <Txt InputWeight="700" inputColor="#0033A0">{item.code}</Txt>
+                                <Txt inputWeight="700" inputColor="#0033A0">{item.code}</Txt>
                             </KodeKupon>
                         </ListKupon>
                     </TouchableNativeFeedback>

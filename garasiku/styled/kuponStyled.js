@@ -10,22 +10,24 @@ background-color: #fff;
 elevation: 5;
 margin: 7px 15px 8px 15px;
 border-radius: 10px;
-padding: 10px;
+justify-content: space-evenly;
+padding: 20px 10px 10px 10px;
 `
 export const KuponContent = styled.View`
 flex-direction: row;
-justify-content: space-between;
+justify-content: space-evenly;
 `
 export const KodeKupon = styled.View`
 border: 2px dashed #C2D5FF;
 align-items: center;
 padding: 10px;
-margin: 15px 0px 5px 0px;
+margin: 15px 10px 5px 10px;
 `
 export const Txt = styled.Text`
-font-weight: ${props => props.inputWeight || "bold"};
-color: ${props => props.inputColor || "#000"}; 
+font-weight: ${props => props.inputWeight || "normal"};
+color: ${props => props.inputColor || "#313131"}; 
 font-size: ${props => props.inputSize || "14px"};
+margin-top: ${props => props.marginTop || "0px"};
 `
 export const Icons = styled.View`
 justify-content: space-around;
@@ -44,7 +46,7 @@ padding: 15px;
 background-color: #fff;
 `
 export const Title = styled.Text`
-font-size: 24px;
+font-size: 22px;
 font-weight: 700;
 color: black;
 `
@@ -66,11 +68,15 @@ height: 1000px;
 `
 export const ButtonKlaim = styled.View`
 background-color: #0033A0;
-margin: 10px 20px 10px 20px;
+margin: 10px 20px 20px 20px;
 padding: 15px;
 position: absolute;
 bottom: 0px;
 width: 90%;
 align-items: center;
-border-radius: 10px;
+border-radius: 5px;
+`
+export const TxtSk = styled.Text`
+margin: 5px 0px 5px 0px;
+text-align: justify;
 `
