@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, TouchableNativeFeedback, Text } from 'react-native'
-import { Container, Images, Title, DetailsKupon, IconsDetail, Expires, Txt, Sketentuan, ButtonKlaim,TxtSk } from '../styled/kuponStyled'
+import { Container, Images, Title, DetailsKupon, IconsDetail, Expires, Txt, Sketentuan, ButtonKlaim, TxtSk, Touchable } from '../styled/kuponStyled'
 
 const DetailKupon = ({ route }) => {
     const {
@@ -32,15 +32,17 @@ const DetailKupon = ({ route }) => {
             </DetailsKupon>
             <Sketentuan>
                 <Txt inputWeight="700" inputSize="20px">Syarat dan Ketentuan</Txt>
-                    <TxtSk>{sk.type1}</TxtSk>
-                    <TxtSk>{sk.type2}</TxtSk>
-                    <TxtSk>{sk.type3}</TxtSk>
+                <TxtSk>{sk.type1}</TxtSk>
+                <TxtSk>{sk.type2}</TxtSk>
+                <TxtSk>{sk.type3}</TxtSk>
             </Sketentuan>
-            <TouchableNativeFeedback>
-                <ButtonKlaim>
-                    <Txt inputColor="#fff" inputSize="18px">Gunakan Kupon Diskon</Txt>
-                </ButtonKlaim>
-            </TouchableNativeFeedback>
+            <Touchable>
+                <TouchableNativeFeedback>
+                    <ButtonKlaim>
+                        <Txt inputColor="#fff" inputSize="18px" inputWeight="bold">Gunakan Kupon Diskon</Txt>
+                    </ButtonKlaim>
+                </TouchableNativeFeedback>
+            </Touchable>
         </Container>
     )
 }

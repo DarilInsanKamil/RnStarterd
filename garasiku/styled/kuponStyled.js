@@ -67,16 +67,23 @@ padding: 20px;
 height: 1000px;
 `
 export const ButtonKlaim = styled.View`
-background-color: #0033A0;
-margin: 10px 20px 20px 20px;
 padding: 15px;
-position: absolute;
-bottom: 0px;
-width: 90%;
+background-color: #0033A0;
 align-items: center;
 border-radius: 5px;
 `
 export const TxtSk = styled.Text`
 margin: 5px 0px 5px 0px;
 text-align: justify;
+font-size: 15px;
+`
+export const Touchable = styled.View`
+background-color: #fff;
+elevation: 10;
+position: absolute;
+bottom: 0px;
+width: 100%;
+box-shadow: 0px -10px 5px black;
+padding: 20px 15px 15px 15px;
+border: 0.5px solid rgba(0, 0, 0, 0.3);
 `
