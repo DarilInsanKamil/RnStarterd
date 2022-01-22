@@ -5,17 +5,6 @@ import jam from '../asset/jam.png'
 import uang from '../asset/uang.png'
 import kupondetail from '../asset/kupondetail.png'
 import kupondetail2 from '../asset/kupondetail2.png'
-import headeimg from '../asset/headerimg.png'
-import setting from '../asset/settings.png'
-import levelicons from '../asset/Levelicon.png'
-import arrow from '../asset/arrow.png'
-import poin from '../asset/poin.png'
-import referal from '../asset/Referal.png'
-import Bag from '../asset/Bag.png'
-import Dikirim from '../asset/Dikirim.png'
-import Money from '../asset/Money.png'
-import Garasiku from '../asset/garasiku.png'
-import Proses from '../asset/Proses.png'
 const Data = [
     {
         key: 1,
@@ -66,19 +55,5 @@ const Data = [
             type3: '\u2B24 Bagikan ke grup WhatsApp atau Social Media Anda untuk kesempatan poin yang lebih besar',
         }
     }, 
-    {
-        key: 4,
-        referals : referal,
-        headerimg :headeimg,
-        arrows : arrow,
-        poins: poin,
-        bag: Bag,
-        money: Money,
-        dikirim: Dikirim,
-        settings: setting,
-        levelicon: levelicons,
-        proses: Proses,
-        garasiku: Garasiku
-    }
 ]
 export { Data }

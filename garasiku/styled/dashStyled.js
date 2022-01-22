@@ -1,8 +1,8 @@
 import styled from "styled-components";
+
 export const Container = styled.View`
 flex: 1;
 `
-
 export const Header = styled.ImageBackground`
 padding: 30px 15px 30px 15px;
 flex-direction: row;
@@ -14,13 +14,13 @@ flex-direction: row;
 `
 export const TxtDash = styled.Text`
 background-color: blue;
-width: 55px;
-font-size: 20px;
+width: 48px;
+font-size: 16px;
 color: #fff;
 font-weight: bold;
 padding: 12px;
 text-align: center;
-border-radius: 5px;
+border-radius: 8px;
 justify-content: center;
 `
 export const Level = styled.View`
@@ -35,6 +35,12 @@ export const TxtName = styled.Text`
 font-size: ${props => props.size || "22px"};
 font-weight: ${props => props.weight || "bold"};
 color: ${props => props.color || "#fff"};
+margin-bottom: ${props => props.mbtm || "0px"};
+`
+export const SeeAll = styled.View`
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
 `
 export const Poin = styled.View`
 background-color: rgba(0,0,0, 0.15)
@@ -91,14 +97,56 @@ margin: 15px 0px 0px 0px;
 padding: 15px;
 `
 export const AddVehicle = styled.Text`
-border: 2px dashed #C2D5FF;
-padding: 15px;
-color: #fff;
+border: ${props => props.borders || "none"};
+padding: 10px;
+color: ${props => props.color || "#fff"};
+background-color: ${props => props.bcolor || "rgba(0,0,0, 0.0)"}
 font-size: 16px;
 font-weight: 700;
 text-align: center;
 margin: 10px 0px 0px 0px;
+border-radius: 5px;
 `
 export const TextAdd = styled.View`
 flex-direction: row;
+justify-content: space-between;
+align-items: center;
+`
+export const TxtFeat = styled.Text`
+width: 60%;
+color: #fff;
+font-size: 12px;
+`
+export const OtherContainer = styled.View`
+margin: 5px 0px 10px 0px;
+`
+export const Others= styled.View`
+flex-direction: row;
+padding: 15px;
+align-items: center;
+justify-content: space-between;
+border-bottom-width: 0.2px;
+border-color: #C2D5FF;
+`
+export const FlatKupon = styled.View`
+margin: 5px 0px 0px 5px;
+width: 200px;
+padding: 10px 0px 10px 0px;
+border-radius: 8px;
+`
+export const MyVoucher = styled.View`
+flex-direction: row;
+margin-top: 10px;
+border: 1px dashed #C2D5FF;
+padding: 10px;
+align-items: center;
+justify-content: space-between;
+`
+export const Txtkupon = styled.Text`
+margin-left: ${props => props.mleft || "0px"};
+`
+export const IconLoc = styled.View`
+margin-left: ${props => props.mleft || "0px"};
+flex-direction: row;
+align-items: center;
 `
