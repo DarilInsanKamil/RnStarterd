@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.View`
 flex: 1;
+background-color: #fff;
 `
 export const Header = styled.ImageBackground`
 padding: 30px 15px 30px 15px;
@@ -57,11 +58,12 @@ padding: 10px;
 border-radius: 7px;
 margin: -40px 15px 0px 15px;
 flex-direction: row;
-justify-content: space-between;
+justify-content: space-around;
 `
 export const RefPoin = styled.View`
 flex-direction: row;
 align-items: center;
+width: 45%;
 `
 export const ViewRefPoin = styled.View`
 margin-left: 10px;
@@ -136,11 +138,12 @@ border-radius: 8px;
 `
 export const MyVoucher = styled.View`
 flex-direction: row;
-margin-top: 10px;
+margin: 10px 0px 0px 0px;
 border: 1px dashed #C2D5FF;
-padding: 10px;
+padding: 5px;
+border-radius: 8px;
 align-items: center;
-justify-content: space-between;
+justify-content: space-around;
 `
 export const Txtkupon = styled.Text`
 margin-left: ${props => props.mleft || "0px"};
@@ -149,4 +152,7 @@ export const IconLoc = styled.View`
 margin-left: ${props => props.mleft || "0px"};
 flex-direction: row;
 align-items: center;
+`
+export const VoucherContiner = styled.View`
+margin-left: 10px;
 `

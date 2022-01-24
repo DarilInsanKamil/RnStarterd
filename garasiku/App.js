@@ -3,8 +3,8 @@ import DashboardEmpty from './Screen/DashboardEmpty';
 import Navigation from './Navigation';
 const App = () => {
   return (
-    // <Navigation/>
-    <DashboardEmpty />
+    <Navigation/>
+    // <DashboardEmpty />
   )
 }
 export default App

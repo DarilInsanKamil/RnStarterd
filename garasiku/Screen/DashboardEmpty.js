@@ -26,16 +26,24 @@ import {
     Others,
     FlatKupon,
     MyVoucher,
+    VoucherContiner,
     Txtkupon,
     IconLoc
 } from '../styled/dashStyled';
 import { Datas } from '../Data/Datadash2';
 import { DataDash } from '../Data/DataDash';
 
-const DashboardEmpty = () => {
-    const [login, seLogin] = useState(true)
-    const [add, seAdd] = useState(true)
+const DashboardEmpty = ({ navigation, route }) => {
 
+    const [login, seLogin] = useState(true)
+    const [nama, setNama] = useState("Astra Otowati")
+    const [add, setAdd] = useState()
+    
+    useEffect(() => {
+        if (route.params?.post) {
+
+        }
+    }, [route.params?.post]);
     let bag, dikirim, money, poin, setting, levelicons, referal, arrow, headeimg, proses, garasiku, arrow2, location, voucher, chevron, jam
     const datas = Datas.map((e) => {
         return (
@@ -73,7 +81,7 @@ const DashboardEmpty = () => {
                     <Profile>
                         <TxtDash>AO</TxtDash>
                         <Name>
-                            <TxtName>Astra Otowati</TxtName>
+                            <TxtName>{nama ? nama : "Astra Otowati"}</TxtName>
                             <Level>
                                 <TouchableNativeFeedback>
                                     <Poin>
@@ -93,7 +101,7 @@ const DashboardEmpty = () => {
                 {/* Poin and Referal */}
 
                 <RefContainer>
-                    <RefPoin>
+                    <RefPoin bord="1px solid black">
                         <Image source={poin} />
                         <ViewRefPoin>
                             <TxtName color="#616161" size="12px" weight="normal">Poin saya</TxtName>
@@ -150,7 +158,7 @@ const DashboardEmpty = () => {
                         <TxtName color="#000" size="18px">Kupon Diskon Saya</TxtName>
                         {
                             login ?
-                                <TouchableNativeFeedback>
+                                <TouchableNativeFeedback onPress={() => navigation.navigate('listkupon')}>
                                     <TxtName color="#0033A0" size="12px">Lihat semua</TxtName>
                                 </TouchableNativeFeedback> : null
                         }
@@ -193,7 +201,7 @@ const DashboardEmpty = () => {
                             <>
                                 <MyVoucher>
                                     <Image source={voucher} />
-                                    <View>
+                                    <VoucherContiner>
                                         <TxtName size="15px" color="#000" weight="500" mbtm="5px">Voucher Spooring + Balancing Shop&Drive</TxtName>
                                         <IconLoc>
                                             <Image source={jam} />
@@ -203,12 +211,12 @@ const DashboardEmpty = () => {
                                             <Image source={location} />
                                             <Txtkupon mleft="7px">Shop&Drive Hybrida, Jakarta Utara</Txtkupon>
                                         </IconLoc>
-                                    </View>
+                                    </VoucherContiner>
                                     <Image source={chevron} />
                                 </MyVoucher>
                                 <MyVoucher>
                                     <Image source={voucher} />
-                                    <View>
+                                    <VoucherContiner>
                                         <TxtName size="15px" color="#000" weight="500" mbtm="5px">Voucher Spooring + Balancing Shop&Drive</TxtName>
                                         <IconLoc>
                                             <Image source={jam} />
@@ -218,12 +226,12 @@ const DashboardEmpty = () => {
                                             <Image source={location} />
                                             <Txtkupon mleft="7px">Shop&Drive Hybrida, Jakarta Utara</Txtkupon>
                                         </IconLoc>
-                                    </View>
+                                    </VoucherContiner>
                                     <Image source={chevron} />
                                 </MyVoucher>
                                 <MyVoucher>
                                     <Image source={voucher} />
-                                    <View>
+                                    <VoucherContiner>
                                         <TxtName size="15px" color="#000" weight="500" mbtm="5px">Voucher Spooring + Balancing Shop&Drive</TxtName>
                                         <IconLoc>
                                             <Image source={jam} />
@@ -233,7 +241,7 @@ const DashboardEmpty = () => {
                                             <Image source={location} />
                                             <Txtkupon mleft="7px">Shop&Drive Hybrida, Jakarta Utara</Txtkupon>
                                         </IconLoc>
-                                    </View>
+                                    </VoucherContiner>
                                     <Image source={chevron} />
                                 </MyVoucher>
 
@@ -255,7 +263,7 @@ const DashboardEmpty = () => {
                         </TxtName>
                         <TxtFeat>Gunakan fitur garasiku untuk mencari sparepart secara cepat dan lebih akurat</TxtFeat>
                     </TextAdd>
-                    <TouchableNativeFeedback>
+                    <TouchableNativeFeedback onPress={() => navigation.navigate('garasiku')}>
                         {
                             add ? <AddVehicle bcolor="yellow" color="blue" borders="none">Cari Sekarang</AddVehicle>
                                 : <AddVehicle borders="2px dashed #C2D5FF">+ Tambah Kendaraan</AddVehicle>
@@ -263,7 +271,7 @@ const DashboardEmpty = () => {
                     </TouchableNativeFeedback>
                 </AddContainer>
                 <OtherContainer>
-                    <TouchableNativeFeedback>
+                    <TouchableNativeFeedback onPress={() => navigation.navigate('lacakpesanan')}>
                         <Others>
                             <TxtName color="#000" size="14px" weight="600">Lacak Pesanan</TxtName>
                             <Image source={arrow2} />
@@ -300,7 +308,7 @@ const DashboardEmpty = () => {
                                     <TxtName color="#000" size="14px" weight="600">Booking Service</TxtName>
                                     <Image source={arrow2} />
                                 </Others>
-                            </TouchableNativeFeedback> : null                          
+                            </TouchableNativeFeedback> : null
                     }
 
                 </OtherContainer>
