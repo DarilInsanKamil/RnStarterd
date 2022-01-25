@@ -7,16 +7,25 @@ import BottomTabDash from './Navigator/BottomTabDash';
 import TopTab from './Navigator/TopTab';
 import AddVehicle from './Screen/AddVehicle';
 import LacakPesanan from './Screen/LacakPesanan';
+import headerimg from './asset/headerimg.png'
+import { ImageBackground } from 'react-native';
 
 const Navigation = () => {
+    const Background = () => {
+        return (
+            <ImageBackground source={headerimg}></ImageBackground>
+        )
+    }
     const Stack = createNativeStackNavigator()
     return (
         <NavigationContainer>
 
             <Stack.Navigator>
                 <Stack.Screen name="bottom" component={BottomTabDash} options={{ headerShown: false }} />
-                <Stack.Screen name="garasiku" component={AddVehicle} />
-                <Stack.Screen name="lacakpesanan" component={LacakPesanan} />
+                <Stack.Screen name="garasiku" component={AddVehicle} options={{
+                    headerTransparent: true, headerTintColor: '#fff', headerStyle: { backgroundColor: 'transparent', elevation: 0 }
+                }} />
+                <Stack.Screen name="lacakpesanan" component={LacakPesanan}/>
                 <Stack.Screen name="top" component={TopTab} />
                 <Stack.Screen name="listkupon" component={KuponScreen} options={{
                     title: "Kupon Saya",

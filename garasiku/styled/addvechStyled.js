@@ -60,7 +60,7 @@ border-radius: 8px;
 padding: 10px;
 justify-content: space-around;
 align-items: center;
-margin: 10px 5px 5px 5px; 
+margin: 10px 0px 5px 0px; 
 `
 export const NamaKen = styled.View`
 margin-left: 10px;
@@ -92,7 +92,7 @@ border: 1px solid #f3f3;
 padding: 15px;
 background-color: #fff;
 border-radius: 8px;
-margin: 10px 5px 10px 5px;
+margin: 10px 0px 10px 0px;
 `
 export const SearchVech = styled.View`
 flex-direction: row;
@@ -108,9 +108,10 @@ width: 20px;
 border-radius: 3px;
 height: 20px;
 position: absolute;
-left: -5px;
-top: -5px;
+left: 0px;
+top: -0px;
 `
 export const Background = styled.ImageBackground`
-flex: 1
+flex: 1;
+padding-top: 50px; 
 `

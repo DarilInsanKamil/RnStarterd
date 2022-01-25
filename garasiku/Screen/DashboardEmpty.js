@@ -38,12 +38,8 @@ const DashboardEmpty = ({ navigation, route }) => {
     const [login, seLogin] = useState(true)
     const [nama, setNama] = useState("Astra Otowati")
     const [add, setAdd] = useState()
-    
-    useEffect(() => {
-        if (route.params?.post) {
 
-        }
-    }, [route.params?.post]);
+    
     let bag, dikirim, money, poin, setting, levelicons, referal, arrow, headeimg, proses, garasiku, arrow2, location, voucher, chevron, jam
     const datas = Datas.map((e) => {
         return (
