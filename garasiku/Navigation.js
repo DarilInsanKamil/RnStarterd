@@ -7,26 +7,170 @@ import BottomTabDash from './Navigator/BottomTabDash';
 import TopTab from './Navigator/TopTab';
 import AddVehicle from './Screen/AddVehicle';
 import LacakPesanan from './Screen/LacakPesanan';
-import headerimg from './asset/headerimg.png'
-import { ImageBackground } from 'react-native';
+import TopTabFavorite from './Navigator/TopTabFavorite';
+import Address from './Screen/Address';
+import FormAlamat from './Screen/FormAlamat';
+import CariAlamat from './Screen/CariAlamat';
+import TopTabsUlasan from './Navigator/TopTabsUlasan';
+import TulisUlasan from './Screen/TulisUlasan';
+import TopTabsBooking from './Navigator/TopTabsBooking';
+import DetailBooking from './Screen/DetailBooking';
+import ListTopTab from './Navigator/ListtopTabs';
 
 const Navigation = () => {
-    const Background = () => {
-        return (
-            <ImageBackground source={headerimg}></ImageBackground>
-        )
-    }
     const Stack = createNativeStackNavigator()
     return (
         <NavigationContainer>
-
             <Stack.Navigator>
                 <Stack.Screen name="bottom" component={BottomTabDash} options={{ headerShown: false }} />
                 <Stack.Screen name="garasiku" component={AddVehicle} options={{
                     headerTransparent: true, headerTintColor: '#fff', headerStyle: { backgroundColor: 'transparent', elevation: 0 }
                 }} />
-                <Stack.Screen name="lacakpesanan" component={LacakPesanan}/>
-                <Stack.Screen name="top" component={TopTab} />
+                <Stack.Screen name="listopriwayat" component={ListTopTab} options={{
+                    title: "Riwayat Belanja",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        elevation: 0
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '600',
+                    }
+                }} />
+                <Stack.Screen name="detailbooking" component={DetailBooking} options={{
+                    title: "Detail booking",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        elevation: 0
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '600',
+                    }
+                }} />
+                <Stack.Screen name="tulisulasan" component={TulisUlasan} options={{
+                    title: "Tulis Ulasan",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        elevation: 0
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '600',
+                    }
+                }} />
+                <Stack.Screen name="topbooking" component={TopTabsBooking} options={{
+                    title: "Booking Service Saya",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        elevation: 0
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '600',
+                    }
+                }} />
+                <Stack.Screen name="carialamat" component={CariAlamat} options={{
+                    title: "Cari Alamat",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        elevation: 0
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '600',
+                    }
+                }}
+                />
+                <Stack.Screen name="formalamat" component={FormAlamat} options={{
+                    title: "Tambah Alamat",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        elevation: 0
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '600',
+                    }
+                }}
+                />
+                <Stack.Screen name="alamat" component={Address} options={{
+                    title: "Daftar Alamat",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        elevation: 0
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '600',
+                    }
+                }}
+                />
+                <Stack.Screen name="lacakpesanan" component={LacakPesanan} options={{
+                    title: "Lacak Pesanan",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        elevation: 0
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '600',
+                    }
+                }} />
+                <Stack.Screen name="topulas" component={TopTabsUlasan} options={{
+                    title: "Ulasan Saya",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        elevation: 0
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '600',
+                    }
+                }} />
+                <Stack.Screen name="topfavorite" component={TopTabFavorite} options={{
+                    title: "Favorite",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        elevation: 0
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '600',
+                    }
+                }} />
+                <Stack.Screen name="top" component={TopTab} options={{
+                    title: "Tambah Kendaraan",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '700',
+                    }
+                }} />
                 <Stack.Screen name="listkupon" component={KuponScreen} options={{
                     title: "Kupon Saya",
                     headerStyle: {

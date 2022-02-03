@@ -41,27 +41,6 @@ const DataDash = [
         jam: iconsjam,
         berlaku: "Berlaku hingga 24 Sep 2021"
     },
-    {
-        Icons: {
-            key: 4,
-            referals: referal,
-            headerimg: headeimg,
-            arrows: arrow,
-            arrows2: arrow2,
-            poins: poin,
-            bag: Bag,
-            money: Money,
-            dikirim: Dikirim,
-            settings: setting,
-            levelicon: levelicons,
-            proses: Proses,
-            garasiku: Garasiku,
-            vouchers: Voucher,
-            locations: Location,
-            chevrons: Chevron,
-            iconjam: iconsjam
-        }
-    }
 
 ]
 

@@ -68,7 +68,7 @@ const DashboardEmpty = ({ navigation, route }) => {
 
     return (
         <Container>
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
 
                 {/* Header */}
 
@@ -120,7 +120,7 @@ const DashboardEmpty = ({ navigation, route }) => {
                         <TxtName color="#000" size="18px">Riwayat belanja</TxtName>
                         {
                             login ?
-                                <TouchableNativeFeedback>
+                                <TouchableNativeFeedback onPress={() => navigation.navigate('listopriwayat')}>
                                     <TxtName color="#0033A0" size="12px">Lihat semua</TxtName>
                                 </TouchableNativeFeedback>
                                 : null
@@ -273,7 +273,7 @@ const DashboardEmpty = ({ navigation, route }) => {
                             <Image source={arrow2} />
                         </Others>
                     </TouchableNativeFeedback>
-                    <TouchableNativeFeedback>
+                    <TouchableNativeFeedback onPress={() => navigation.navigate('topfavorite')}>
                         <Others>
                             <TxtName color="#000" size="14px" weight="600">Favorit Saya</TxtName>
                             <Image source={arrow2} />
@@ -285,13 +285,13 @@ const DashboardEmpty = ({ navigation, route }) => {
                             <Image source={arrow2} />
                         </Others>
                     </TouchableNativeFeedback>
-                    <TouchableNativeFeedback>
+                    <TouchableNativeFeedback onPress={() => navigation.navigate('alamat')}>
                         <Others>
                             <TxtName color="#000" size="14px" weight="600">Daftar Alamat</TxtName>
                             <Image source={arrow2} />
                         </Others>
                     </TouchableNativeFeedback>
-                    <TouchableNativeFeedback>
+                    <TouchableNativeFeedback onPress={() => navigation.navigate('topulas')}>
                         <Others>
                             <TxtName color="#000" size="14px" weight="600">Ulasan Produk</TxtName>
                             <Image source={arrow2} />
@@ -299,7 +299,7 @@ const DashboardEmpty = ({ navigation, route }) => {
                     </TouchableNativeFeedback>
                     {
                         login ?
-                            <TouchableNativeFeedback>
+                            <TouchableNativeFeedback onPress={() => navigation.navigate('topbooking')}>
                                 <Others>
                                     <TxtName color="#000" size="14px" weight="600">Booking Service</TxtName>
                                     <Image source={arrow2} />

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/native";
 
 export const Container = styled.View`
 flex: 1;
@@ -35,7 +35,7 @@ border-radius: 6px;
 `
 export const Render = styled.View`
 background-color: #fff;
-margin: 5px 20px 10px 20px;
+margin: 10px;
 border-radius: 8px;
 elevation: 5;
 `
@@ -52,8 +52,6 @@ padding: 10px;
 `
 export const Images = styled.View`
 flex-direction: row;
-justify-content: space-between;
-width: 35%;
 margin: 10px 0px 10px 0px;
 `
 export const Separator = styled.View`
@@ -80,3 +78,6 @@ elevation: 2;
 export const FlatSub = styled.View`
 padding: 15px;
 ` 
+export const ImageItem = styled.Image`
+margin-right: 5px;
+`

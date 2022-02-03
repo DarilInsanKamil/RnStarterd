@@ -1,8 +1,8 @@
-import { View, Text, TouchableNativeFeedback, FlatList, Image } from 'react-native';
+import { View, Text, TouchableNativeFeedback, FlatList, Image, ImageBackground } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { Container, Button, Textstyle, SubContainer, Log, StatusTotal, Images, Separator, FlatSub, InputText, ButtonLacak, Render, Status, Tooltip } from '../styled/lacakPesananStyled';
 import { LacakData } from '../Data/LacakData';
-
+import garasiku from '../asset/garasiku.png'
 const Item = ({ item, display }) => (
 
     <Render style={[display]}>
@@ -57,6 +57,7 @@ const LacakPesanan = () => {
 
     return (
         <Container>
+            <ImageBackground source={garasiku} style={{paddingBottom: 55}}></ImageBackground>
             <SubContainer>
                 <Tooltip dis={tooltip}>
                     <Text>Pesanan yang anda cari tidak tersedia</Text>
