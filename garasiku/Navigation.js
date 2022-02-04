@@ -16,6 +16,7 @@ import TulisUlasan from './Screen/TulisUlasan';
 import TopTabsBooking from './Navigator/TopTabsBooking';
 import DetailBooking from './Screen/DetailBooking';
 import ListTopTab from './Navigator/ListtopTabs';
+import Detailpesanan from './Screen/DetailPesanan';
 
 const Navigation = () => {
     const Stack = createNativeStackNavigator()
@@ -25,6 +26,19 @@ const Navigation = () => {
                 <Stack.Screen name="bottom" component={BottomTabDash} options={{ headerShown: false }} />
                 <Stack.Screen name="garasiku" component={AddVehicle} options={{
                     headerTransparent: true, headerTintColor: '#fff', headerStyle: { backgroundColor: 'transparent', elevation: 0 }
+                }} />
+                <Stack.Screen name="detailpesanan" component={Detailpesanan} options={{
+                    title: "Detail Pesanan",
+                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: 'transparent',
+                        elevation: 0
+                    },
+                    headerTitleAlign: 'center',
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: '600',
+                    }
                 }} />
                 <Stack.Screen name="listopriwayat" component={ListTopTab} options={{
                     title: "Riwayat Belanja",

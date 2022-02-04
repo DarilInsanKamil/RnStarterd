@@ -26,6 +26,7 @@ const ListTopTab = () => {
                     backgroundColor: 'transparent',
                     elevation: 0,
                 },
+                tabBarScrollEnabled: true
             }}>
                 <Tab.Screen name="Semua Transaksi" component={ListRiwayat} />
                 <Tab.Screen name="Belum dibayar" component={BelumBayar} />

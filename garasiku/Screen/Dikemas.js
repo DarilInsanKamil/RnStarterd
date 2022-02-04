@@ -19,7 +19,7 @@ const Dikemas = () => {
                                     <Textstyle color={item.color} size="11px">{item.pesanan}</Textstyle>
                                 </Log>
                             </Status>
-                            <Text>{item.tanggal}</Text>
+                            <Textstyle size="12px">{item.tanggal}</Textstyle>
                             <Images>
                                 <ImageItem source={item.ban} />
                                 <ImageItem source={item.rem} />

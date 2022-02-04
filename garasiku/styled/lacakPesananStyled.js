@@ -35,7 +35,7 @@ border-radius: 6px;
 `
 export const Render = styled.View`
 background-color: #fff;
-margin: 10px;
+margin: 15px 10px 15px 10px;
 border-radius: 8px;
 elevation: 5;
 `

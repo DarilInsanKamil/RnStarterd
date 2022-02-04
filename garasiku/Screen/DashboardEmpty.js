@@ -37,7 +37,7 @@ const DashboardEmpty = ({ navigation, route }) => {
 
     const [login, seLogin] = useState(true)
     const [nama, setNama] = useState("Astra Otowati")
-    const [add, setAdd] = useState()
+    const [add, setAdd] = useState(true)
 
     
     let bag, dikirim, money, poin, setting, levelicons, referal, arrow, headeimg, proses, garasiku, arrow2, location, voucher, chevron, jam
